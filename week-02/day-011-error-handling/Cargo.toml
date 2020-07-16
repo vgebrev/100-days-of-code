@@ -1,0 +1,10 @@
+[package]
+name = "day-011-error-handling"
+version = "0.1.0"
+authors = ["VeliG <vgebrev@gmail.com>"]
+edition = "2018"
+
+[profile.release]
+panic = 'abort'
+
+[dependencies]
