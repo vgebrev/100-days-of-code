@@ -1,0 +1,12 @@
+fn main() {
+    process_with_iterators();
+}
+
+fn process_with_iterators() {
+    let v1 = vec![1, 2, 3];
+    let v1_iter = v1.iter();
+
+    for val in v1_iter {
+        println!("Got: {}", val);
+    }
+}
