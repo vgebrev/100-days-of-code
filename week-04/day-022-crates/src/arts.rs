@@ -7,7 +7,7 @@ pub use self::kinds::SecondaryColor;
 pub use self::utils::mix;
 
 pub mod kinds {
-    #[derive(Debug,PartialEq)]
+    #[derive(Debug, PartialEq)]
     /// The primary colors according to the RYB color model.
     pub enum PrimaryColor {
         Red,
@@ -31,11 +31,26 @@ pub mod utils {
     /// a secondary color.
     pub fn mix(c1: PrimaryColor, c2: PrimaryColor) -> SecondaryColor {
         let palette = vec![
-            (PrimaryColor::Red, PrimaryColor::Yellow, SecondaryColor::Orange),
-            (PrimaryColor::Red, PrimaryColor::Blue, SecondaryColor::Purple),
-            (PrimaryColor::Yellow, PrimaryColor::Blue, SecondaryColor::Green)
+            (
+                PrimaryColor::Red,
+                PrimaryColor::Yellow,
+                SecondaryColor::Orange,
+            ),
+            (
+                PrimaryColor::Red,
+                PrimaryColor::Blue,
+                SecondaryColor::Purple,
+            ),
+            (
+                PrimaryColor::Yellow,
+                PrimaryColor::Blue,
+                SecondaryColor::Green,
+            ),
         ];
-        if let Some(item) = palette.iter().find(|p| (p.0 == c1 && p.1 == c2) || (p.0 == c2 && p.1 == c1)) {
+        if let Some(item) = palette
+            .iter()
+            .find(|p| (p.0 == c1 && p.1 == c2) || (p.0 == c2 && p.1 == c1))
+        {
             item.2
         } else {
             panic!("No combination found for {:?} {:?}", c1, c2);
