@@ -1,6 +1,6 @@
 [package]
 name = "vgebrev-first-crate"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["VeliG <vgebrev@gmail.com>"]
 edition = "2018"
 description = "Sample crate published while learning Rust using 'The Rust Programming Language' book"
